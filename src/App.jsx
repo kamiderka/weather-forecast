@@ -51,7 +51,7 @@ function App() {
         try {
           const { latitude, longitude } = userPosition.coords;
           const response = await fetch(
-            `http://127.0.0.1:8000/forecast?latitude=${latitude}&longitude=${longitude}`
+            `https://weather-forecast-api.azurewebsites.net/forecast?latitude=${latitude}&longitude=${longitude}`
           );
   
           if (!response.ok)
