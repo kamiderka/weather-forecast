@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(23, 23, 23);
+  color: aliceblue;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main {
+  width: 100%;
+  text-align: center;
+  padding: 3rem;
+}
+
+.weather-item-date {
+  padding: 1rem;
+}
+
+.weather-item-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
