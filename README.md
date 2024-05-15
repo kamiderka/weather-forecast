@@ -4,7 +4,8 @@ Weather (and Energy) Forecast
 
 <p align="center">
   <a href="#description">Description</a> •
-  <a href="#run">Run</a> 
+  <a href="#run">Run</a> •
+  <a href="#gallery">Gallery</a>
 </p>
 
 # Description 
@@ -21,3 +22,7 @@ npm run dev
 >The application starts by default at `http://localhost:5173/`.
 
 Those apps do really need .envs...
+
+# Gallery
+![image](https://github.com/kamiderka/weather-forecast/assets/65948245/7673ec86-15eb-4483-a3d6-65755ac5a5ba)
+
