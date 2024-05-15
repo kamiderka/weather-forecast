@@ -2,31 +2,12 @@
 
 import "./index.css";
 import { useState, useEffect } from "react";
+import weatherCode2img from './assets/weatherCode2img.json';
+
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [userPosition, setUserPosition] = useState(null);
-
-  const dummy = [
-    {
-      date: new Date().toLocaleDateString("pl-PL"),
-      maxTemp: 25,
-      minTemp: 15,
-      energy: 10,
-    },
-    {
-      date: new Date().toLocaleDateString("pl-PL"),
-      maxTemp: 33,
-      minTemp: 3,
-      energy: 10,
-    },
-    {
-      date: new Date().toLocaleDateString("pl-PL"),
-      maxTemp: 12,
-      minTemp: 23,
-      energy: 10,
-    },
-  ];
 
   useEffect(() => {
     function getPosition() {
@@ -66,7 +47,7 @@ function App() {
       };
       fetchData();
     }
-  }, [userPosition]); // Add userPosition to the dependency array
+  }, [userPosition]);
   
   return (
     <div className="main">
@@ -92,7 +73,7 @@ function WeatherItem({ data }) {
       <h3 className="weather-item-date">{new Date(date).toLocaleDateString("pl-PL")}</h3>
       <div>
         <div className="weather-item-data">
-          <p>icon: {weatherCode}</p>
+          <p> <img src={ weatherCode2img[String(weatherCode)]["image"] } /> </p>
           <p>Max: {temperatureMax}</p>
           <p>Min: {temperatureMin}</p>
           <p>Energy: {energy} kWh</p>
