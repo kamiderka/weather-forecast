@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 function ToggleSwitch() {
   return (
     <Form>
-      <Form.Check // prettier-ignore
+      <Form.Check 
         type="switch"
         id="custom-switch"
         label="Dark mode"
