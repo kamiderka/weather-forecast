@@ -1,0 +1,40 @@
+.navbar {
+    height: 100px; /* Increase the height of the Navbar */
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
+
+.logo {
+    margin: 10px; 
+}
+
+.navbar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+}
+
+.navbar-header h1 {
+    margin: 0;
+    font-size: 2rem; 
+}
+
+.navbar-header span {
+    font-size: 1rem; 
+    text-align: left;
+    font-style: italic
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-right {
+    margin-left: auto;
+    }

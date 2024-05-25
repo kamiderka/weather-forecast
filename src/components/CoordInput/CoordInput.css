@@ -1,0 +1,19 @@
+
+.input-group-centered {
+    padding: 10px;
+    max-width: 800px; 
+    margin: 0 auto;  
+}
+
+.input-group-centered .btn {
+    flex: 0 0 auto;  
+}
+
+
+.input-group-centered .form-control {
+    flex: 1;  
+}
+
+.input-group-centered .btn img {
+    vertical-align: middle;  
+}
