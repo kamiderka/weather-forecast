@@ -25,5 +25,13 @@ Those apps do really need .envs...
 
 # Gallery
 ![image](https://github.com/kamiderka/weather-forecast/assets/65948245/3a6864e5-e7ca-473b-b56e-edf2f0b423ae)
+<p align="center"><i>Light mode</i></p>  <br/>
+
 ![image](https://github.com/kamiderka/weather-forecast/assets/65948245/97ee536f-65ba-4ab6-b43f-e1906d54f187)
+
+<p align="center"><i>Dark mode</i></p> <br/>
+
 ![image](https://github.com/kamiderka/weather-forecast/assets/65948245/d780bd61-e2d2-498b-a96f-8ae0b6d8873a)
+
+<p align="center"><i>Map modal</i></p>  <br/>
+
