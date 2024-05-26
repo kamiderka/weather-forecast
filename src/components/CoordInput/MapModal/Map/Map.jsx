@@ -35,7 +35,7 @@ export function Map({ latitude, longitude, setLatitude, setLongitude }) {
           />
           <Marker position={[latitude, longitude]}>
             <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
+              Lat: {latitude} <br /> Long: {longitude}
             </Popup>
           </Marker>
           <MapEvents />
