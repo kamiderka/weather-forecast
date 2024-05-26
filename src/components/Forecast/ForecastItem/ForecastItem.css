@@ -10,7 +10,7 @@
     border: 1px solid #ccc;
     border-radius: 0.25rem;
     text-align: center;
-    background-color: rgb(216, 216, 216);
+    background-color: var(--forecast_item);
   }
   
   .forecast-item img {

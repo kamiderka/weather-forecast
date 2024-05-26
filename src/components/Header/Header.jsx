@@ -1,13 +1,13 @@
 import { Container, ToggleButton } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
-import ToggleSwitch from './ToggleSwitch/ToggleSwitch.jsx';
 import './Header.css'
+import { DarkMode } from '../DarkMode/DarkMode.jsx';
 
 
 export function Header(){
     
     return (
-        <Navbar bg="light" className="bg-body-tertiary">
+        <Navbar >
             <Container fluid >
                 <Navbar.Brand>
                     <img className='logo' src="sunny.png" width="50" height="50" />
@@ -17,7 +17,7 @@ export function Header(){
                     </div>
                 </Navbar.Brand>
                 <div className='navbar-right'>
-                    <ToggleSwitch/>
+                    <DarkMode/>
                 </div>
             </Container>
         </Navbar>

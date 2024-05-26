@@ -1,5 +1,6 @@
 import { Modal, Button } from "react-bootstrap";
 import { Map } from "./Map/Map.jsx";
+import './MapModal.css'
 
 export function MapModal({show, onHide, latitude, longitude, setLatitude, setLongitude }) {  
   
@@ -7,6 +8,7 @@ export function MapModal({show, onHide, latitude, longitude, setLatitude, setLon
 
   return (
     <Modal
+      className="map-modal"
       show={show}
       onHide={onHide}
       size="lg"

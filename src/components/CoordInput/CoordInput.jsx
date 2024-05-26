@@ -35,8 +35,8 @@ export function CoordInput({ setCoordinates }) {
 
   return (
     <InputGroup className="mb-3 input-group-centered">
-      <Button variant="outline-secondary" onClick={() => setModalShow(true)} id="button-addon1">
-        <img src="location.png" width="20" height="20" alt="Location Icon" />
+      <Button variant="outline-secondary" onClick={() => setModalShow(true)} className='coord-button'>
+        <img src="location.png" width="20" height="20" id='location_img' />
       </Button>
 
       <MapModal show={modalShow} onHide={() => setModalShow(false)}           
@@ -47,6 +47,7 @@ export function CoordInput({ setCoordinates }) {
       />
 
       <Form.Control
+        className='coord-input'
         aria-label="Latitude"
         placeholder="Latitude"
         type="number"
@@ -54,13 +55,14 @@ export function CoordInput({ setCoordinates }) {
         onChange={(e) => setLatitude(e.target.value)}
       />
       <Form.Control
+        className='coord-input'
         aria-label="Longitude"
         placeholder="Longitude"
         type="number"
         value={longitude}
         onChange={(e) => setLongitude(e.target.value)}
       />
-      <Button variant="outline-secondary" id="button-addon1" onClick={handleSearch}>
+      <Button variant="outline-secondary" className='coord-button' onClick={handleSearch}>
         Search
       </Button>
     </InputGroup>

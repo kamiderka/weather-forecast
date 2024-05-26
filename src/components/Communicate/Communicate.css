@@ -8,6 +8,8 @@
     border-radius: 0.25rem;
     text-align: center;
     flex-direction: column;
+    background-color: var(--input_background);
+    color: var(--input_color);
 
 }
 
