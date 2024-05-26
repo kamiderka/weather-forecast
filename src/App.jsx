@@ -8,14 +8,18 @@ import Forecast from './components/Forecast/Forecast.jsx';
 
 function App() {
 
+  const [coordinates, setCoordinates] = useState({ latitude: null, longitude: null });
+
+
   return (
     <>
       <header> 
         <Header/>
       </header>
       <main>
-        <CoordInput/>
-        <Forecast/>
+        <CoordInput setCoordinates={setCoordinates}/>
+        {coordinates.latitude}
+        <Forecast />
       </main>
     </>
   )
