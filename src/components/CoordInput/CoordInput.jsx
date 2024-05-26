@@ -1,7 +1,7 @@
 import { InputGroup, Form, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import './CoordInput.css';
-import Map from './Map/Map.jsx';
+import MapModal from './MapModal/MapModal.jsx';
 
 export function CoordInput({ setCoordinates }) {
   const [modalShow, setModalShow] = useState(false);
@@ -39,7 +39,7 @@ export function CoordInput({ setCoordinates }) {
         <img src="location.png" width="20" height="20" alt="Location Icon" />
       </Button>
 
-      <Map show={modalShow} onHide={() => setModalShow(false)} />
+      <MapModal show={modalShow} onHide={() => setModalShow(false)} />
 
       <Form.Control
         aria-label="Latitude"

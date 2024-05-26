@@ -1,6 +1,7 @@
 import { Modal, Button } from "react-bootstrap";
+import { Map } from "./Map/Map.jsx";
 
-export function Map(props) {  
+export function MapModal(props) {  
     
   return (
     <Modal
@@ -16,10 +17,10 @@ export function Map(props) {
       </Modal.Header>
 
       <Modal.Body>
-      <img src="map.png" width="100%"/>      
+        <Map />     
       </Modal.Body>
     </Modal>
   );
 }
 
-export default Map;
+export default MapModal;
