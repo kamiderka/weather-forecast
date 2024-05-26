@@ -39,7 +39,12 @@ export function CoordInput({ setCoordinates }) {
         <img src="location.png" width="20" height="20" alt="Location Icon" />
       </Button>
 
-      <MapModal show={modalShow} onHide={() => setModalShow(false)} />
+      <MapModal show={modalShow} onHide={() => setModalShow(false)}           
+          latitude={latitude} 
+          longitude={longitude} 
+          setLatitude={setLatitude} 
+          setLongitude={setLongitude} 
+      />
 
       <Form.Control
         aria-label="Latitude"

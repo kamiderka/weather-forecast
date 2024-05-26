@@ -1,11 +1,14 @@
 import { Modal, Button } from "react-bootstrap";
 import { Map } from "./Map/Map.jsx";
 
-export function MapModal(props) {  
-    
+export function MapModal({show, onHide, latitude, longitude, setLatitude, setLongitude }) {  
+  
+  console.log(latitude)
+
   return (
     <Modal
-      {...props}
+      show={show}
+      onHide={onHide}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -17,7 +20,12 @@ export function MapModal(props) {
       </Modal.Header>
 
       <Modal.Body>
-        <Map />     
+        <Map 
+          latitude={latitude} 
+          longitude={longitude} 
+          setLatitude={setLatitude} 
+          setLongitude={setLongitude} 
+        />     
       </Modal.Body>
     </Modal>
   );
