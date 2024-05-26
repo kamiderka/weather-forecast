@@ -4,6 +4,7 @@ import './App.css'
 import { Header } from './components/Header/Header.jsx';
 import { CoordInput } from './components/CoordInput/CoordInput.jsx';
 import Forecast from './components/Forecast/Forecast.jsx';
+import { Communicate } from './components/Communicate/Communicate.jsx';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       <main>
         <CoordInput setCoordinates={setCoordinates}/>
         { (coordinates) 
-        ? <Forecast coordinates={coordinates} /> : <></>}
+        ? <Forecast coordinates={coordinates} /> : 
+        <Communicate content={"Choose location and click Search"} />} 
         
       </main>
     </>

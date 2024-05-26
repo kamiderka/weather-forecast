@@ -1,0 +1,18 @@
+.communicate{
+    display: flex;
+    width: 30rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+.communicate-row{
+    align-items: center;
+    justify-content: center;
+
+}
