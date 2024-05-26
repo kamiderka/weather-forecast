@@ -1,24 +1,40 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ForecastItem from './ForecastItem/ForecastItem.jsx';
 import './Forecast.css'
 
-function Forecast() {
+function Forecast({coordinates}) {
 
-    const forecastData = [
-    { date: '2024-05-15T00:00:00+00:00', weatherCode: '1', temperatureMax: 25, temperatureMin: 15, energy: 5.5 },
-    { date: '2024-05-16T00:00:00+00:00', weatherCode: '1', temperatureMax: 22, temperatureMin: 14, energy: 5.0 },
-    { date: '2024-05-17T00:00:00+00:00', weatherCode: '1', temperatureMax: 18, temperatureMin: 12, energy: 4.8 },
-    { date: '2024-05-18T00:00:00+00:00', weatherCode: '1', temperatureMax: 20, temperatureMin: 13, energy: 5.2 },
-    { date: '2024-05-19T00:00:00+00:00', weatherCode: '1', temperatureMax: 5, temperatureMin: -2, energy: 6.0 },
-    { date: '2024-05-20T00:00:00+00:00', weatherCode: '1', temperatureMax: 19, temperatureMin: 11, energy: 5.3 },
-    { date: '2024-05-21T00:00:00+00:00', weatherCode: '1', temperatureMax: 26, temperatureMin: 16, energy: 5.7 },
-  ];
+  const [forecastData, setForecastData] = useState(null);
+  
+  useEffect(() => {
+    if (coordinates) {
+      const fetchData = async function () {
+        try {
+          const { latitude, longitude } = coordinates;
+          const response = await fetch(
+            `https://weather-forecast-api.azurewebsites.net/forecast?latitude=${latitude}&longitude=${longitude}`
+          );
+  
+          if (!response.ok)
+            throw new Error("Something went wrong while fetching data!");
+  
+          const data = await response.json();
+          setForecastData(data);
+          console.log(forecastData);
+        } catch (err) {
+          console.error(err);
+        }
+      };
+      fetchData();
+    }
+  }, [coordinates]);
+
 
   return (
     <Container >
       <Row className='forecast-row'>
-        {forecastData.map((data, index) => (
+        {forecastData && forecastData.map((data, index) => (
           <Col key={index}>
             <ForecastItem
               date={data.date} 
