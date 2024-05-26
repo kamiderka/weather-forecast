@@ -2,6 +2,7 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import { precisionRound } from '../../../../utils/precisionRound';
 
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
@@ -19,8 +20,8 @@ export function Map({ latitude, longitude, setLatitude, setLongitude }) {
     const MapEvents = () => {
         useMapEvents({
           click(e) {
-            setLatitude(e.latlng.lat);
-            setLongitude(e.latlng.lng);
+            setLatitude(precisionRound(e.latlng.lat,4));
+            setLongitude(precisionRound(e.latlng.lng,4));
           },
         });
         return null;
