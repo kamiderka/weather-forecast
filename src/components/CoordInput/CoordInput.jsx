@@ -2,6 +2,9 @@ import { InputGroup, Form, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import './CoordInput.css';
 import MapModal from './MapModal/MapModal.jsx';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export function CoordInput({ setCoordinates }) {
   const [modalShow, setModalShow] = useState(false);
@@ -27,10 +30,19 @@ export function CoordInput({ setCoordinates }) {
   }, []);
 
   const handleSearch = () => {
+
+    if (latitude < -90.0 || latitude > 90.0){
+      toast("Latitude should be in range <-90°:90°>")
+       
+    } else if (longitude < -180.0 || longitude > 180.0){
+      toast("Longitude should be in range <-180°:180°>")
+       
+    } else {
     setCoordinates({
       latitude: parseFloat(latitude),
       longitude: parseFloat(longitude)
     });
+    }
   };
 
   return (
@@ -65,6 +77,8 @@ export function CoordInput({ setCoordinates }) {
       <Button variant="outline-secondary" className='coord-button' onClick={handleSearch}>
         Search
       </Button>
+      <ToastContainer position='top-left'/>
+
     </InputGroup>
   );
 }
