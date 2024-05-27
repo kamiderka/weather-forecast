@@ -6,7 +6,7 @@ import './Forecast.css'
 function Forecast({coordinates}) {
 
   const [forecastData, setForecastData] = useState(null);
-  const API_URL = process.env.API_URL
+  const API_URL = process.env.REACT_APP_API_URL
   console.log(API_URL)
   
   useEffect(() => {
