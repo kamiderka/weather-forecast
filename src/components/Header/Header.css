@@ -1,46 +1,45 @@
-.header-container{
-    background-color: rgb(42, 105, 160);
+.header-container {
+  background-color: rgb(42, 105, 160);
 }
 
 .navbar {
-    height: 100px; 
-    padding: 10px 20px; 
+  height: 100px;
+  padding: 10px 20px;
 }
 
-
 .logo {
-    margin: 10px; 
+  margin: 10px;
 }
 
 .navbar-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center; 
-    color: var(--body_color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--body_color);
 }
 
 .navbar-header h1 {
-    margin: 0;
-    font-size: 2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar-header span {
-    font-size: 1rem; 
-    text-align: left;
-    font-style: italic
+  font-size: 1rem;
+  text-align: left;
+  font-style: italic;
 }
 
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar-right {
-    margin-left: auto;
-    }
+  margin-left: auto;
+}

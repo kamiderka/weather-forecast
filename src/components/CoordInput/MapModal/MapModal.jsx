@@ -1,10 +1,16 @@
 import { Modal, Button } from "react-bootstrap";
 import { Map } from "./Map/Map.jsx";
-import './MapModal.css'
+import "./MapModal.css";
 
-export function MapModal({show, onHide, latitude, longitude, setLatitude, setLongitude }) {  
-  
-  console.log(latitude)
+export function MapModal({
+  show,
+  onHide,
+  latitude,
+  longitude,
+  setLatitude,
+  setLongitude,
+}) {
+  console.log(latitude);
 
   return (
     <Modal
@@ -22,12 +28,12 @@ export function MapModal({show, onHide, latitude, longitude, setLatitude, setLon
       </Modal.Header>
 
       <Modal.Body>
-        <Map 
-          latitude={latitude} 
-          longitude={longitude} 
-          setLatitude={setLatitude} 
-          setLongitude={setLongitude} 
-        />     
+        <Map
+          latitude={latitude}
+          longitude={longitude}
+          setLatitude={setLatitude}
+          setLongitude={setLongitude}
+        />
       </Modal.Body>
     </Modal>
   );

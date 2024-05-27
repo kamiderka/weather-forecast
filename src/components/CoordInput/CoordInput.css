@@ -1,42 +1,37 @@
-
 .input-group-centered {
-    padding: 10px;
-    max-width: 800px; 
-    margin: 0 auto;  
+  padding: 10px;
+  max-width: 800px;
+  margin: 0 auto;
 }
-
 
 .input-group-centered .btn {
-    flex: 0 0 auto;  
+  flex: 0 0 auto;
 }
 
-
 .input-group-centered .form-control {
-    flex: 1;  
+  flex: 1;
 }
 
 .input-group-centered .btn img {
-    vertical-align: middle;  
+  vertical-align: middle;
 }
 
-.coord-input{
-    background-color: var(--input_background);
-    color: var(--input_color);
+.coord-input {
+  background-color: var(--input_background);
+  color: var(--input_color);
 }
 
-.coord-input{
-    background-color: var(--input_background);
-    color: var(--input_color);
+.coord-input {
+  background-color: var(--input_background);
+  color: var(--input_color);
 }
 
-
-.coord-button{
-    background-color: var(--input_background);
-    color: var(--input_color);
+.coord-button {
+  background-color: var(--input_background);
+  color: var(--input_color);
 }
 
-[data-theme="dark"] #location_img  {
-    -webkit-filter: invert(1);
-    filter: invert(1); 
+[data-theme="dark"] #location_img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
-

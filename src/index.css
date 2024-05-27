@@ -1,35 +1,33 @@
 :root {
-    --body_background: #f2f2f2;
-    --body_color: #0d0d0d;
-    
-    --forecast_item : rgb(216, 216, 216);
-    
-    --input_background: #f7f7f7;
-    --input_color: #0d0d0d;
+  --body_background: #f2f2f2;
+  --body_color: #0d0d0d;
 
-    --modal_background: #f2f2f2;
-    
+  --forecast_item: rgb(216, 216, 216);
+
+  --input_background: #f7f7f7;
+  --input_color: #0d0d0d;
+
+  --modal_background: #f2f2f2;
 }
 
-[data-theme="dark"]{
-    --body_background: #413e3e;
-    --body_color: #f2f2f2;
+[data-theme="dark"] {
+  --body_background: #413e3e;
+  --body_color: #f2f2f2;
 
-    --forecast_item : rgb(121, 121, 121);
-    
-    --input_background: #262626;
-    --input_color: #f2f2f2;
+  --forecast_item: rgb(121, 121, 121);
 
-    --modal_background: #262626;
+  --input_background: #262626;
+  --input_color: #f2f2f2;
 
+  --modal_background: #262626;
 }
 
 body {
-    background: var(--body_background);
-    color: var(--body_color);
-  }
+  background: var(--body_background);
+  color: var(--body_color);
+}
 
 header {
-    background: var(--body_background);
-    color: var(--body_color);
+  background: var(--body_background);
+  color: var(--body_color);
 }

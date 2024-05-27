@@ -1,13 +1,9 @@
-import Form from 'react-bootstrap/Form';
+import Form from "react-bootstrap/Form";
 
 function ToggleSwitch() {
   return (
     <Form>
-      <Form.Check 
-        type="switch"
-        id="custom-switch"
-        label="Dark mode"
-      />
+      <Form.Check type="switch" id="custom-switch" label="Dark mode" />
     </Form>
   );
 }
