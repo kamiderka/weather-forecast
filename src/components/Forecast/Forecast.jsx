@@ -6,6 +6,7 @@ import './Forecast.css'
 function Forecast({coordinates}) {
 
   const [forecastData, setForecastData] = useState(null);
+  const API_URL = process.env.API_URL
   
   useEffect(() => {
     if (coordinates) {
@@ -13,7 +14,7 @@ function Forecast({coordinates}) {
         try {
           const { latitude, longitude } = coordinates;
           const response = await fetch(
-            `https://weather-forecast-api.azurewebsites.net/forecast?latitude=${latitude}&longitude=${longitude}`
+            API_URL + `/forecast?latitude=${latitude}&longitude=${longitude}`
           );
   
           if (!response.ok)
